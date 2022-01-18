@@ -1,4 +1,4 @@
-**ostream有bug，未修改**
+**ostream有bug在Ubuntu系统可以编译**
 
 ###copy的用法
 ```c++
