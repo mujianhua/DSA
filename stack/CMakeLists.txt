@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(include)
 
-add_executable(stack main.cpp include/linkedStack.h)
+aux_source_directory(src SRC_LIST)
+
+add_executable(stack main.cpp ${SRC_LIST})

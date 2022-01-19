@@ -11,12 +11,14 @@
 #include "changeLength1D.h"
 
 template<class T>
-class arrayStack : public stack<T> {
+class arrayStack : public stack<int> {
 private:
     int stackTop;
     int arrayLength;
     T *stack;
 public:
+//    arrayStack(int initialCapacity) : stack<T>(initialCapacity) {}
+
     arrayStack(int initialCapacity = 10);
 
     ~arrayStack() { delete[] stack; }

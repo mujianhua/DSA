@@ -1,7 +1,11 @@
 #include <iostream>
 #include "arrayStack.h"
-#include "linkedStack.h"
+
+void printMatchedPairs(string expr);
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    string expr;
+    expr = "(d+(a+b)*c*(d+e)-f))(()";
+    printMatchedPairs(expr);
     return 0;
 }

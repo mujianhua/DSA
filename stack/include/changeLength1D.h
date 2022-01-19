@@ -3,7 +3,7 @@
 #ifndef changeLength1D_
 #define changeLength1D_
 
-#include "include/myExceptions.h"
+#include "myExceptions.h"
 
 using namespace std;
 

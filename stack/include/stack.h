@@ -14,7 +14,7 @@ public:
 
     virtual int size() const = 0;
 
-    virtual T &top() const = 0;
+    virtual T &top() = 0;//woshishabi... 不带const.........
 
     virtual void pop() = 0;
 
