@@ -1,11 +1,18 @@
 #include <iostream>
+#include <string>
 #include "arrayStack.h"
 
-void printMatchedPairs(string expr);
+using namespace std;
 
-int main() {
-    string expr;
-    expr = "(d+(a+b)*c*(d+e)-f))(()";
-    printMatchedPairs(expr);
+//void printMatchedPairs(string expr);
+
+
+
+void moveAndShow(int, int, int, int);
+
+void towersOfHanoi(int);
+
+int main(void) {
+    towersOfHanoi(5);
     return 0;
 }
