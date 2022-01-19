@@ -1,4 +1,4 @@
-**自己学习数据结构与算法的仓库~~~~~~~~**
+# Learning Data Structure and Algorithms
 
 ## arrayList
 
