@@ -8,13 +8,16 @@ using namespace std;
 //2.hanoi
 //void moveAndShow(int, int, int, int);
 //void towersOfHanoi(int);
-void outputFromHoldingTrack();
-bool putInHoldingTrack(int c);
-bool railroad(int inputOrder[], int theNumberOfCars,
-              int theNumberOfTracks);
-
+//3.train and track
+//void outputFromHoldingTrack();
+//bool putInHoldingTrack(int c);
+//bool railroad(int inputOrder[], int theNumberOfCars,
+//              int theNumberOfTracks);
+//4.Box
+bool checkBox(int net[], int n);
 int main(void) {
-    int p[] = {0, 3, 6, 9, 2, 4, 7, 1, 8, 5};
-    railroad(p, 9, 3);
+    int p[] = {1, 2, 2, 1, 3, 3, 4, 4};
+    checkBox(p, 8);
     return 0;
 }
+
