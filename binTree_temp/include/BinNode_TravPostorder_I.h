@@ -2,7 +2,13 @@
 // Created by MJH on 2022/1/21.
 //
 
-#ifndef BINTREE_TEMP_BINNODE_TRAVPOSTORDER_I_H
-#define BINTREE_TEMP_BINNODE_TRAVPOSTORDER_I_H
+#pragma once
 
-#endif //BINTREE_TEMP_BINNODE_TRAVPOSTORDER_I_H
+template<typename T, typename VST>
+void travPost_I(BinNodePosi<T> x, VST &visit) {
+    std::stack<BinNodePosi<T>> S;
+    if (x) S.push(x);
+    while (!S.empty()) {
+
+    }
+}

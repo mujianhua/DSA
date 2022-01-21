@@ -2,7 +2,20 @@
 // Created by MJH on 2022/1/21.
 //
 
-#ifndef BINTREE_TEMP_BINNODE_TRAVINORDER_I2_H
-#define BINTREE_TEMP_BINNODE_TRAVINORDER_I2_H
 
-#endif //BINTREE_TEMP_BINNODE_TRAVINORDER_I2_H
+#pragma once
+
+template<typename T, typename VST>
+void travIn_I2(BinNodePosi<T> x, VST &visit) {
+    std::stack<BinNodePosi<T>> S;
+    while (true) {
+        if (x) {
+            S.push(x);
+            x = x->lc;
+        } else if (!S.empty()) {
+            x = S.pop();
+            visit(x->data);
+            x = x->rc;
+        } else break;
+    }
+}
