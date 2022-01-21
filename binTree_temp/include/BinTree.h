@@ -11,6 +11,7 @@ protected:
     int _size;
     BinNodePosi<T> _root;
 
+    // 在某些种类的二叉树，高度定义有所不同，因此这里将updateHeight()定义为保护级的虚方法，以便派生类在必要时重写
     virtual int updateHeight(BinNodePosi<T> x);
 
     void updateHeightAbove(BinNodePosi<T> x);

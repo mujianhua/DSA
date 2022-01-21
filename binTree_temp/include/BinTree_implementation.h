@@ -8,3 +8,4 @@
 using namespace std;
 
 #include "BinTree_updateHeight.h"
+#include "BinTree_insert.h"
