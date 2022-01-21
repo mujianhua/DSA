@@ -7,4 +7,4 @@ include_directories(include)
 
 aux_source_directory(src SRC_LIST)
 
-add_executable(stack main.cpp src/railroadWithStack.cpp)
+add_executable(stack main.cpp src/checkBox.cpp)
