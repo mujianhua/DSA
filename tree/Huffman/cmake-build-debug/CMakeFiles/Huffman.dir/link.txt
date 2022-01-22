@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Huffman.dir/objects.a
+C:\PROGRA~1\mingw64\bin\ar.exe cr CMakeFiles\Huffman.dir/objects.a @CMakeFiles\Huffman.dir\objects1.rsp
+C:\PROGRA~1\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Huffman.dir/objects.a -Wl,--no-whole-archive  -o Huffman.exe -Wl,--out-implib,libHuffman.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Huffman.dir\linklibs.rsp
