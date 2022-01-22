@@ -6,11 +6,12 @@
 
 template<typename T>
 BinNodePosi<T> &BST<T>::search(const T &e) {
-    if (!_root || e == BinTree<T>::_root->data) {
+    if (!BinTree<T>::_root || e == BinTree<T>::_root->data) {
+        //bug: protected 的变量为什么派生类还是不能用.......???????????????
         _hot = nullptr;
-        return _root;
+        return BinTree<T>::_root;
     }
-    for (_hot = _root;;) {
+    for (_hot = BinTree<T>::_root;;) {
         BinNodePosi<T> &v = (e < _hot->data) ? _hot->lc : _hot->rc;
         if (!v || e == v->data)
             return v;
