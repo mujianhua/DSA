@@ -7,3 +7,4 @@
 #include "BST_remove.h"
 #include "BST_removeAt.h"
 #include "BST_RotateAt.h"
+#include "BST_connect34.h"
