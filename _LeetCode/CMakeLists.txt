@@ -4,3 +4,4 @@ project(_LeetCode)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(_LeetCode main.cpp)
+add_executable(P797AllPathsFromSourceToTarget leetcode/editor/cn/Graph/P797AllPathsFromSourceToTarget.cpp)
