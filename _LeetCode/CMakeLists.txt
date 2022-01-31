@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(_LeetCode main.cpp)
 add_executable(P797AllPathsFromSourceToTarget leetcode/editor/cn/Graph/P797AllPathsFromSourceToTarget.cpp)
-add_executable(P455AssignCookies leetcode/editor/Greedy/P455AssignCookies.cpp)
+add_executable(P455AssignCookies leetcode/editor/cn/Greedy/P455AssignCookies.cpp)
