@@ -54,22 +54,24 @@ using namespace std;
  */
 class Solution {
 public:
-    void pre(TreeNode *root, vector<int> &res){
-        if (!root)
-            return;
-        res.push_back(root->val);
-        pre(root->left,res);
-        pre(root->right,res);
-    }
-    vector<int> preorderTraversal(TreeNode* root) {
-        vector<int> res;
-        pre(root, res);
-        return res;
+//    void pre(TreeNode *root, vector<int> &res){
+//        if (!root)
+//            return;
+//        res.push_back(root->val);
+//        pre(root->left,res);
+//        pre(root->right,res);
+//    }
+    vector<int> preorderTraversal(TreeNode *root) {
+//        vector<int> res;
+//        pre(root, res);
+//        return res;
+        stack<TreeNode *> stk;
+
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
-int main(){
+int main() {
     Solution S;
     return 0;
 }
