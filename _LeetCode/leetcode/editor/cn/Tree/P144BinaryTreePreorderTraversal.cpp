@@ -1,4 +1,4 @@
-//Given the root of a binary tree, return the inorder traversal of its nodes' 
+//Given the root of a binary tree, return the preorder traversal of its nodes' 
 //values. 
 //
 // 
@@ -6,7 +6,7 @@
 //
 // 
 //Input: root = [1,null,2,3]
-//Output: [1,3,2]
+//Output: [1,2,3]
 // 
 //
 // Example 2: 
@@ -32,23 +32,12 @@
 // 
 //
 // 
-//Follow up: Recursive solution is trivial, could you do it iteratively? 
-//Related Topics 栈 树 深度优先搜索 二叉树 👍 1254 👎 0
+// Follow up: Recursive solution is trivial, could you do it iteratively? 
+// Related Topics 栈 树 深度优先搜索 二叉树 👍 724 👎 0
 
 #include <iostream>
 #include <bits/stdc++.h>
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
+#include "../leetcode_include.h"
 
 using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
@@ -65,23 +54,22 @@ using namespace std;
  */
 class Solution {
 public:
-    void inorder(TreeNode *root, vector<int> &res) {
+    void pre(TreeNode *root, vector<int> &res){
         if (!root)
             return;
-        inorder(root->left, res);
         res.push_back(root->val);
-        inorder(root->right, res);
+        pre(root->left,res);
+        pre(root->right,res);
     }
-
-    vector<int> inorderTraversal(TreeNode *root) {
+    vector<int> preorderTraversal(TreeNode* root) {
         vector<int> res;
-        inorder(root, res);
+        pre(root, res);
         return res;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
-int main() {
+int main(){
     Solution S;
     return 0;
 }

@@ -1,4 +1,4 @@
-//Given the root of a binary tree, return the inorder traversal of its nodes' 
+//Given the root of a binary tree, return the postorder traversal of its nodes' 
 //values. 
 //
 // 
@@ -6,7 +6,7 @@
 //
 // 
 //Input: root = [1,null,2,3]
-//Output: [1,3,2]
+//Output: [3,2,1]
 // 
 //
 // Example 2: 
@@ -27,28 +27,17 @@
 // Constraints: 
 //
 // 
-// The number of nodes in the tree is in the range [0, 100]. 
+// The number of the nodes in the tree is in the range [0, 100]. 
 // -100 <= Node.val <= 100 
 // 
 //
 // 
 //Follow up: Recursive solution is trivial, could you do it iteratively? 
-//Related Topics 栈 树 深度优先搜索 二叉树 👍 1254 👎 0
+//Related Topics 栈 树 深度优先搜索 二叉树 👍 750 👎 0
 
 #include <iostream>
 #include <bits/stdc++.h>
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
+#include "../leetcode_include.h"
 
 using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
@@ -65,17 +54,17 @@ using namespace std;
  */
 class Solution {
 public:
-    void inorder(TreeNode *root, vector<int> &res) {
+    void post(TreeNode *root, vector<int> &res) {
         if (!root)
             return;
-        inorder(root->left, res);
+        post(root->left, res);
+        post(root->right, res);
         res.push_back(root->val);
-        inorder(root->right, res);
     }
 
-    vector<int> inorderTraversal(TreeNode *root) {
+    vector<int> postorderTraversal(TreeNode *root) {
         vector<int> res;
-        inorder(root, res);
+        post(root, res);
         return res;
     }
 };
