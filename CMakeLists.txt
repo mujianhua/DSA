@@ -3,7 +3,7 @@ project(my-test-project VERSION 0.1.0)
 
 set(CMAKE_CXX_FLAGS "${CAMKE_CXX_FLAGS} -Wall")
 set(CMAKE_BUILD_TYPE "Debug")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)
 
 
 include(CTest)
