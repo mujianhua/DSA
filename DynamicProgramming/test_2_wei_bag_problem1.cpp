@@ -36,10 +36,11 @@ void test_1_wei_bag_problem1() {
       dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);
     }
   }
+  cout << dp[bagweight] << '\n';
 }
 
 int main() {
-  test_2_wei_bag_problem1();
+  test_1_wei_bag_problem1();
   cout << "test";
   return 0;
 }
